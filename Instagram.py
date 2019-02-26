@@ -66,7 +66,7 @@ try:
         for i,z in zip(image_list,range(1,len(image_list) + 1)):
 
                 response = requests.get(i)
-                with open("C:\\Users\\Talha\\Desktop\\Instagram\\Images\\" + username + "\\Image_" + str(z) + ".png",'wb') as f:
+                with open("Path Here" + username + "\\Image_" + str(z) + ".png",'wb') as f:
                                 f.write(response.content)
 
 except Exception as e:
