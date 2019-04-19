@@ -13,7 +13,7 @@ try:
         options.add_argument('--headless')
         
         url = "https://www.instagram.com/" + username
-        driver = webdriver.Firefox()#options=options
+        driver = webdriver.Firefox(options=options)
         driver.get(url)
         html_content = driver.execute_script("return document.documentElement.outerHTML")
         soup = BeautifulSoup(html_content, "html.parser")
@@ -66,7 +66,7 @@ try:
         for i,z in zip(image_list,range(1,len(image_list) + 1)):
 
                 response = requests.get(i)
-                with open("Path Here" + username + "\\Image_" + str(z) + ".png",'wb') as f:
+                with open("C:\\Users\\Talha\\Desktop\\Python Files\\Instagram\\Images\\" + username + "\\Image_" + str(z) + ".png",'wb') as f:
                                 f.write(response.content)
 
 except Exception as e:
